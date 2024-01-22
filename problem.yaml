@@ -1,0 +1,145 @@
+rooms:
+  - Salle PAS000
+  - Amphi 300
+  - Salle PAS135a
+  - Salle PAS135b
+  - Salle PAS136
+  - Salle PAS137
+  - Salle PAS015
+persons:
+  - Christophe Demko
+  - El-Hadi Zahzah
+  - Matthieu Brazier
+  - Aurélien Gilson
+  - Achille Beaugendre
+  - Gérald Plouffe
+  - Hervé Lahaye
+  - Alphonse Vidal
+  - Baptiste De Villepin
+  - Émeric Durand
+  - Georges LaFromboise
+  - Alexis Hémery
+groups:
+  - name: Christophe Demko
+    members:
+      - Christophe Demko
+  - name: Christophe Demko & El-Hadi Zahzah
+    members:
+      - Christophe Demko
+      - El-Hadi Zahzah
+  - name: Promotion L2 Informatique
+    members:
+      - Matthieu Brazier
+      - Aurélien Gilson
+      - Achille Beaugendre
+      - Gérald Plouffe
+      - Hervé Lahaye
+      - Alphonse Vidal
+      - Baptiste De Villepin
+      - Émeric Durand
+      - Georges LaFromboise
+      - Alexis Hémery
+  - name: TP majeure 1a
+    members:
+      - Matthieu Brazier
+      - Aurélien Gilson
+      - Achille Beaugendre
+  - name: Salle PAS135
+    members:
+     - Salle PAS135a
+     - Salle PAS135b
+  - name: Salle PAS136
+    members:
+     - Salle PAS136
+  - name: Salle PAS137
+    members:
+     - Salle PAS137
+  - name: Salle PAS015
+    members:
+     - Salle PAS015
+  - name: Amphi 300
+    members:
+     - Amphi 300
+  - name: Salle PAS000
+    members:
+     - Salle PAS000
+  - name: Repas
+    members:
+activities:
+  - title: CM de Programmation impérative (novice)
+    groups:
+      - Christophe Demko
+      - Promotion L2 Informatique
+    slots:
+      - starting: 2023-10-09T09:45:00
+        ending: 2023-10-09T11:15:00
+        rooms: Amphi 300
+      - starting: 2023-10-09T11:30:00
+        ending: 2023-10-09T13:00:00
+        rooms: Amphi 300
+      - starting: 2023-10-09T09:45:00
+        ending: 2023-10-09T11:15:00
+        rooms: Salle PAS000
+      - starting: 2023-10-09T11:30:00
+        ending: 2023-10-09T13:00:00
+        rooms: Salle PAS000
+  - title: TP1a de Programmation impérative (novice)
+    groups:
+      - Christophe Demko & El-Hadi Zahzah
+      - TP majeure 1a
+    slots:
+      - starting: 2023-10-09T08:00:00
+        ending: 2023-10-09T11:00:00
+        rooms: Salle PAS135
+      - starting: 2023-10-09T09:45:00
+        ending: 2023-10-09T12:45:00
+        rooms: Salle PAS135
+      - starting: 2023-10-09T08:00:00
+        ending: 2023-10-09T11:00:00
+        rooms: Salle PAS136
+      - starting: 2023-10-09T11:30:00
+        ending: 2023-10-09T13:00:00
+        rooms: Salle PAS136
+      - starting: 2023-10-09T08:00:00
+        ending: 2023-10-09T11:00:00
+        rooms: Salle PAS137
+      - starting: 2023-10-09T11:30:00
+        ending: 2023-10-09T13:00:00
+        rooms: Salle PAS137
+      - starting: 2023-10-09T08:00:00
+        ending: 2023-10-09T11:00:00
+        rooms: Salle PAS015
+      - starting: 2023-10-09T11:30:00
+        ending: 2023-10-09T13:00:00
+        rooms: Salle PAS015
+  - title: déjeuner lundi Groupe 1a
+    groups:
+      - TP majeure 1a
+    slots:
+      - starting: 2023-10-09T11:30:00
+        ending: 2023-10-09T13:00:00
+        rooms: Repas
+      - starting: 2023-10-09T12:00:00
+        ending: 2023-10-09T13:30:00
+        rooms: Repas
+      - starting: 2023-10-09T12:30:00
+        ending: 2023-10-09T14:00:00
+        rooms: Repas
+constraints:
+  - type: precedence
+    activities:
+      - CM de Programmation impérative (novice)
+      - TP1a de Programmation impérative (novice)
+  - type: closeness
+    activities:
+      - CM de Programmation impérative (novice)
+      - TP1a de Programmation impérative (novice)
+  - type: occupancy
+    rooms: Amphi 300
+  - type: efficiency
+    group: Promotion L2 Informatique
+  - type: efficiency
+    group: Christophe Demko & El-Hadi Zahzah
+  - type: dispatch
+    group: Promotion L2 Informatique
+
